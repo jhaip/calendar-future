@@ -50,6 +50,9 @@ function onSearchResponse(response) {
     showResponse(response);
 }
 
+// Convert javascript Date object d to the RFC 3339 format used in google api requests
+// taken from:
+// http://stackoverflow.com/questions/13550965/converting-javascript-date-to-rfc-3339-google-calendar-date
 function ISODateString(d) {
     function pad(n){return n<10 ? '0'+n : n}
     return d.getUTCFullYear()+'-'
